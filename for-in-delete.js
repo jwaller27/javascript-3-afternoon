@@ -40,9 +40,10 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  for(var key in obj){
+      console.log(values[key])
+  }
 }
-
 
 
 ////////// PROBLEM 2 //////////
@@ -54,7 +55,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function greaterThan10(obj){
+  for (var key in obj){
+      if (obj[key]>10){
+          obj[key]=0;
+      }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +74,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double(obj){
+  for(var key in obj){
+      obj[key]=obj[key]*2;
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
