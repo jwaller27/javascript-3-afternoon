@@ -30,7 +30,20 @@
 */
 
 //Code Here
+class Employee {
+  constructor(first,last,email,age){
+      this.first_name = first;
+      this.last_name = last;
+      this.email = email;
+      this.age = age;
+  }
+  makeWidget(){
+      return this.first_name + ' ' + this.last_name +' '+ "Widget"
+  }
+}
 
+var newItem = new Employee('jimmy','waller','blah.com',33);
+console.log(newItem.makeWidget());
 
 
 ////////// PROBLEM 2 //////////
@@ -50,6 +63,18 @@
 */
 
 //Code Here
+class Manager extends Employee {
+  constructor(first,last,email,age,reports){
+    super(first,last,email,age);
+    this.reports = []; 
+};
+hire(emp){
+    this.reports.push(emp);
+}
+fire(index){
+    this.reports.splice(index,1);
+}
+};
 
 
 
